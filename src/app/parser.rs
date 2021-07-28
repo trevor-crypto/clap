@@ -11,7 +11,7 @@ use std::iter::Peekable;
     feature = "debug",
     not(any(target_os = "windows", target_arch = "wasm32"))
 ))]
-use std::os::unix::ffi::OsStrExt;
+use std::os::fortanix_sgx::ffi::OsStrExt;
 use std::path::PathBuf;
 use std::slice::Iter;
 
@@ -693,7 +693,7 @@ where
         #[cfg(any(target_os = "windows", target_arch = "wasm32"))]
         use osstringext::OsStrExt3;
         #[cfg(not(any(target_os = "windows", target_arch = "wasm32")))]
-        use std::os::unix::ffi::OsStrExt;
+        use std::os::fortanix_sgx::ffi::OsStrExt;
         debugln!("Parser::possible_subcommand: arg={:?}", arg_os);
         fn starts(h: &str, n: &OsStr) -> bool {
             let n_bytes = n.as_bytes();

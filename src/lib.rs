@@ -517,6 +517,7 @@
 //! [license]: https://github.com/clap-rs/clap/blob/v2.33.1/LICENSE-MIT
 
 #![crate_type = "lib"]
+#![allow(warnings)]
 #![doc(html_root_url = "https://docs.rs/clap/2.33.3")]
 #![deny(
     missing_docs,

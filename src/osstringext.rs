@@ -1,6 +1,6 @@
 use std::ffi::OsStr;
 #[cfg(not(any(target_os = "windows", target_arch = "wasm32")))]
-use std::os::unix::ffi::OsStrExt;
+use std::os::fortanix_sgx::ffi::OsStrExt;
 #[cfg(any(target_os = "windows", target_arch = "wasm32"))]
 use INVALID_UTF8;
 
